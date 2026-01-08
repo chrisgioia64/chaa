@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+const behavioralHealthEntry = await getEntry('programs', 'behavioral-health');
+const { Content } = await behavioralHealthEntry.render();
+---
+
+<Layout title={`${behavioralHealthEntry.data.title} - CHAA`}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-4xl font-bold mb-8" style="color: #1a2b3c;">{behavioralHealthEntry.data.title}</h1>
+    
+    <div class="prose max-w-none text-gray-700 ml-10">
+      <Content />
+    </div>
+  </div>
+</Layout>
+

@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+const communityEngagementEntry = await getEntry('programs', 'community-engagement');
+const { Content } = await communityEngagementEntry.render();
+---
+
+<Layout title={`${communityEngagementEntry.data.title} - CHAA`}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-4xl font-bold mb-8" style="color: #1a2b3c;">{communityEngagementEntry.data.title}</h1>
+    
+    <div class="prose max-w-none text-gray-700 ml-10">
+      <Content />
+    </div>
+  </div>
+</Layout>
+
