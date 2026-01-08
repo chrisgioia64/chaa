@@ -6,9 +6,9 @@ import Layout from '../layouts/Layout.astro';
   <!-- Carousel -->
   <div class="relative w-full h-[400px] overflow-hidden bg-gray-200">
     <div id="carousel-container" class="flex h-full transition-transform duration-500 ease-in-out">
-      <img src="/carousel1.jpg" alt="Carousel Image 1" class="min-w-full h-full object-cover" />
-      <img src="/carousel2.jpg" alt="Carousel Image 2" class="min-w-full h-full object-cover" />
-      <img src="/carousel3.jpg" alt="Carousel Image 3" class="min-w-full h-full object-cover" />
+      <img src="/images/carousel1.jpg" alt="Carousel Image 1" class="min-w-full h-full object-cover" />
+      <img src="/images/carousel2.jpg" alt="Carousel Image 2" class="min-w-full h-full object-cover" />
+      <img src="/images/carousel3.jpg" alt="Carousel Image 3" class="min-w-full h-full object-cover" />
     </div>
     
     <!-- Left Arrow -->
@@ -58,7 +58,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       <div class="rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center" style="background-color: #5E8568;">
         <h2 class="text-xl font-semibold text-white mb-3">Behavioral Health</h2>
-        <img src="/oddleaf.png" alt="Leaf icon" class="mx-auto h-16 w-auto mb-4" />
+        <img src="/images/oddleaf.png" alt="Leaf icon" class="mx-auto h-16 w-auto mb-4" />
         <p class="text-sm text-white mb-4">To become active in our own plan for wellness</p>
         <a href="/programs/behavioral-health" class="inline-block text-white px-6 py-2 rounded-md font-medium transition-all hover:scale-105 hover:shadow-lg" style="background-color: #C95B39;" onmouseover="this.style.backgroundColor='#A04A2E'" onmouseout="this.style.backgroundColor='#C95B39'">
           Learn More
@@ -67,7 +67,7 @@ import Layout from '../layouts/Layout.astro';
       
       <div class="rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center" style="background-color: #8BA292;">
         <h2 class="text-xl font-semibold text-white mb-3">Community Engagement</h2>
-        <img src="/evenleaf.png" alt="Leaf icon" class="mx-auto h-16 w-auto mb-4" />
+        <img src="/images/evenleaf.png" alt="Leaf icon" class="mx-auto h-16 w-auto mb-4" />
         <p class="text-sm text-white mb-4">To empower and support our communities</p>
         <a href="/programs/community-engagement" class="inline-block text-white px-6 py-2 rounded-md font-medium transition-all hover:scale-105 hover:shadow-lg" style="background-color: #C95B39;" onmouseover="this.style.backgroundColor='#A04A2E'" onmouseout="this.style.backgroundColor='#C95B39'">
           Learn More
@@ -76,7 +76,7 @@ import Layout from '../layouts/Layout.astro';
       
       <div class="rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center" style="background-color: #5E8568;">
         <h2 class="text-xl font-semibold text-white mb-3">Youth Programs</h2>
-        <img src="/oddleaf.png" alt="Leaf icon" class="mx-auto h-16 w-auto mb-4" />
+        <img src="/images/oddleaf.png" alt="Leaf icon" class="mx-auto h-16 w-auto mb-4" />
         <p class="text-sm text-white mb-4">To promote healthy lifestyles and positive choices</p>
         <a href="/programs/youth-programs" class="inline-block text-white px-6 py-2 rounded-md font-medium transition-all hover:scale-105 hover:shadow-lg" style="background-color: #C95B39;" onmouseover="this.style.backgroundColor='#A04A2E'" onmouseout="this.style.backgroundColor='#C95B39'">
           Learn More
@@ -85,7 +85,7 @@ import Layout from '../layouts/Layout.astro';
       
       <div class="rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center" style="background-color: #8BA292;">
         <h2 class="text-xl font-semibold text-white mb-3">API Health Source</h2>
-        <img src="/evenleaf.png" alt="Leaf icon" class="mx-auto h-16 w-auto mb-4" />
+        <img src="/images/evenleaf.png" alt="Leaf icon" class="mx-auto h-16 w-auto mb-4" />
         <p class="text-sm text-white mb-4">To provide culturally relevant resources</p>
         <a href="/programs/api-health-source" class="inline-block text-white px-6 py-2 rounded-md font-medium transition-all hover:scale-105 hover:shadow-lg" style="background-color: #C95B39;" onmouseover="this.style.backgroundColor='#A04A2E'" onmouseout="this.style.backgroundColor='#C95B39'">
           Learn More
@@ -100,7 +100,7 @@ import Layout from '../layouts/Layout.astro';
           Community Health for Asian Americans (CHAA) is a non-profit organization committed to improving the quality of life for marginalized communities with special focus on Asian and Pacific Islander (API) communities in the Bay Area.
         </p>
         <a href="/get-involved/donate" class="inline-block transition-all md:w-1/4">
-          <img id="donate-button" src="/DonateNow.png" alt="Donate Now" class="w-full h-auto border-2 border-chaa-teal rounded" />
+          <img id="donate-button" src="/images/DonateNow.png" alt="Donate Now" class="w-full h-auto rounded" />
         </a>
       </div>
       
@@ -214,11 +214,11 @@ import Layout from '../layouts/Layout.astro';
   
   if (donateLink && donateButton) {
     donateLink.addEventListener('mouseenter', () => {
-      donateButton.src = '/DonateNowHover.png';
+      donateButton.src = '/images/DonateNowHover.png';
     });
     
     donateLink.addEventListener('mouseleave', () => {
-      donateButton.src = '/DonateNow.png';
+      donateButton.src = '/images/DonateNow.png';
     });
   }
 </script>
