@@ -1,0 +1,61 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+const donateEntry = await getEntry('get-involved', 'donate');
+const { Content } = await donateEntry.render();
+---
+
+<Layout title={`${donateEntry.data.title} - CHAA`}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-4xl font-bold mb-8" style="color: #1a2b3c;">{donateEntry.data.title}</h1>
+    
+    <div class="prose max-w-none text-gray-700 ml-10">
+      <Content />
+    </div>
+  </div>
+</Layout>
+
+<style is:global>
+  .prose .donate-button-container {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  .prose .donate-button {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+  }
+  .prose .donate-button img {
+    display: block;
+    transition: opacity 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+  .prose .donate-button::after {
+    content: '';
+    background-image: url('/images/DonateNowHover.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .prose .donate-button:hover img {
+    opacity: 0;
+  }
+  .prose .donate-button:hover::after {
+    opacity: 1;
+  }
+</style>
+

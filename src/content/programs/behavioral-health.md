@@ -12,3 +12,4 @@ CHAA provides mental health treatment services to adults at risk of homelessness
 
 CHAA also provides wraparound services in both West and East Contra Costa County. Wraparound is a family-centered, strength-based program serving children, youth and families confronted with complex issues that are chronic and systemic, and who need additional support from a team of dedicated providers. Services include parenting skills, preparation for work through communication and skills development, personal finances management, and greater awareness of service systems and supports.
 
+

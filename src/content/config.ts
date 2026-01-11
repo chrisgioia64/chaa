@@ -19,9 +19,36 @@ const aboutCollection = defineCollection({
   }),
 });
 
+const getInvolvedCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+  }),
+});
+
+const resourcesCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+  }),
+});
+
+const contactCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+  }),
+});
+
 export const collections = {
   'programs': programsCollection,
   'about': aboutCollection,
+  'get-involved': getInvolvedCollection,
+  'resources': resourcesCollection,
+  'contact': contactCollection,
 };
 
 

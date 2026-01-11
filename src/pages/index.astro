@@ -33,8 +33,15 @@ import Layout from '../layouts/Layout.astro';
       </svg>
     </button>
     
+    <!-- Text Overlay -->
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full text-center px-4 py-4 bg-chaa-navy bg-opacity-90">
+      <p class="text-2xl md:text-3xl font-bold text-chaa-terracota">
+        Creating Brighter Futures with <strong>Asian American</strong> and <strong>Pacific Islander</strong> Communities
+      </p>
+    </div>
+    
     <!-- Indicators -->
-    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+    <div class="absolute bottom-24 md:bottom-28 left-1/2 -translate-x-1/2 flex space-x-2">
       <button 
         id="indicator-0" 
         class="w-3 h-3 rounded-full bg-white bg-opacity-75 hover:bg-opacity-100 transition-all active"
@@ -84,7 +91,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
       
       <div class="rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center" style="background-color: #8BA292;">
-        <h2 class="text-xl font-semibold text-white mb-3">API Health Source</h2>
+        <h2 class="text-xl font-semibold text-white mb-3">Resources</h2>
         <img src="/images/evenleaf.png" alt="Leaf icon" class="mx-auto h-16 w-auto mb-4" />
         <p class="text-sm text-white mb-4">To provide culturally relevant resources</p>
         <a href="/programs/api-health-source" class="inline-block text-white px-6 py-2 rounded-md font-medium transition-all hover:scale-105 hover:shadow-lg" style="background-color: #C95B39;" onmouseover="this.style.backgroundColor='#A04A2E'" onmouseout="this.style.backgroundColor='#C95B39'">
@@ -93,29 +100,26 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
     
-    <!-- About Text and Donate Button -->
+    <!-- About Text -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mt-12">
       <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
         <p class="text-left text-gray-700 md:w-3/4 text-lg">
           Community Health for Asian Americans (CHAA) is a non-profit organization committed to improving the quality of life for marginalized communities with special focus on Asian and Pacific Islander (API) communities in the Bay Area.
         </p>
-        <a href="/get-involved/donate" class="inline-block transition-all md:w-1/4">
-          <img id="donate-button" src="/images/DonateNow.png" alt="Donate Now" class="w-full h-auto rounded" />
-        </a>
       </div>
       
       <!-- Location Sections -->
       <div class="mt-16">
-        <h2 class="text-3xl font-semibold py-4 px-4 md:px-6 text-center border-2 border-chaa-navy" style="background-color: #F9F8F4; color: #1a2b3c;">Our Locations</h2>
+        <h2 class="text-3xl font-semibold py-4 px-4 md:px-6 text-center border-chaa-navy" style="background-color: #F9F8F4; color: #1a2b3c;">Our Locations</h2>
       </div>
-      <div class="flex flex-col md:flex-row border-2 border-chaa-navy" style="background-color: #F9F8F4;">
+      <div class="flex flex-col md:flex-row  border-chaa-navy" style="background-color: #F9F8F4;">
         <div class="flex-1 px-4 md:px-6 md:border-r border-chaa-teal py-6 text-center">
-          <h3 class="text-2xl font-semibold mb-4 text-center" style="color: #1a2b3c;">Alameda</h3>
+          <h3 class="text-2xl font-semibold mb-4 text-center" style="color: #1a2b3c;">Oakland</h3>
           <div class="grid grid-cols-[35%_65%] gap-4 mb-4">
             <div class="font-medium text-gray-700">Phone</div>
             <div class="text-gray-800">(510) 835-2777</div>
             <div class="font-medium text-gray-700">Address</div>
-            <div class="text-gray-800">1141 Harbor Bay Parkway Alameda, CA 94502</div>
+            <div class="text-gray-800">424 2nd St.<br />Oakland, CA 94607</div>
           </div>
           <a href="#" class="inline-block text-white px-6 py-2 rounded-md font-medium transition-all hover:scale-105 hover:shadow-lg" style="background-color: #1a2b3c;" onmouseover="this.style.backgroundColor='#0f1a24'" onmouseout="this.style.backgroundColor='#1a2b3c'">
             Get Directions
@@ -207,19 +211,5 @@ import Layout from '../layouts/Layout.astro';
 
   // Initialize
   updateCarousel();
-
-  // Donate button hover effect
-  const donateButton = document.getElementById('donate-button');
-  const donateLink = donateButton?.closest('a');
-  
-  if (donateLink && donateButton) {
-    donateLink.addEventListener('mouseenter', () => {
-      donateButton.src = '/images/DonateNowHover.png';
-    });
-    
-    donateLink.addEventListener('mouseleave', () => {
-      donateButton.src = '/images/DonateNow.png';
-    });
-  }
 </script>
 

@@ -1,0 +1,75 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+const youthProgramsEntry = await getEntry('programs', 'youth-programs');
+const { Content } = await youthProgramsEntry.render();
+---
+
+<Layout title={`${youthProgramsEntry.data.title} - CHAA`}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-4xl font-bold mb-8" style="color: #1a2b3c;">{youthProgramsEntry.data.title}</h1>
+    
+    <div class="prose max-w-none text-gray-700 ml-10">
+      <Content />
+    </div>
+  </div>
+</Layout>
+
+<style is:global>
+  /* Target images inside the Markdown container */
+  img {
+    float: left;
+    margin-right: 1.5rem; /* Space between image and text */
+    margin-bottom: 1rem;  /* Space below image */
+    margin-top: 0;        /* Remove top margin to align with text */
+    padding-top: 0;      /* Remove any padding */
+    max-width: 40%;       /* Prevent the image from taking over the screen */
+    height: auto;
+    border-radius: 8px;   /* Optional styling */
+    vertical-align: top;  /* Align image to top */
+    display: block;       /* Remove inline spacing */
+  }
+
+  /* Ensure headings don't add extra space before images */
+  .prose h1 + img,
+  .prose h2 + img,
+  .prose h3 + img {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /* Target paragraphs that come after images (even with blank lines in markdown) */
+  .prose img ~ p {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    line-height: 1.6;
+    overflow: hidden; /* Contain the paragraph */
+  }
+
+  /* Specifically target the first paragraph after an image to align with image top */
+  .prose h1 + img ~ p:first-of-type,
+  .prose h2 + img ~ p:first-of-type,
+  .prose h3 + img ~ p:first-of-type {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    vertical-align: top;
+  }
+
+  /* Ensure image and following paragraph start at same vertical position */
+  .prose h1 + img,
+  .prose h2 + img,
+  .prose h3 + img {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+  }
+
+  /* Clearfix: Prevents the next section from jumping up into the float */
+  .content-wrapper::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+</style>
+

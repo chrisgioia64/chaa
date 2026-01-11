@@ -34,3 +34,4 @@ Through API Connections, a collaborative of API community groups and partners in
 
 ## Advocacy and Systems Change
 While CHAA’s policy work is targeted at multiple systems, the work begins at the individual and community levels. Using popular education and community-based participatory research, we assist communities in building action for change. We bring the voices of the communities we represent to various local, state and national forums in advocating for resource allocations to new and emerging API refugee communities.
+
